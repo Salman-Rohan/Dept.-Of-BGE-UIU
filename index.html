@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>UIU BGE Department</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{margin:0;font-family:Arial, sans-serif;background:#f7f7f7;color:#222;}
+header{background:#111;color:#fff;padding:15px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}
+header h2{margin:0;font-size:18px;}
+nav a{color:#ff7b00;margin:0 8px;text-decoration:none;font-weight:bold;padding:6px 8px;border-radius:4px;cursor:pointer;}
+nav a:hover{background:#ff7b00;color:#fff;}
+.container{width:90%;max-width:900px;margin:20px auto;background:#fff;padding:20px;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,0.1);}
+.section-btn,.sub-btn,.accordion{display:block;padding:12px;margin:8px 0;background:#ff7b00;color:white;text-align:center;border-radius:6px;cursor:pointer;}
+.section-btn:hover,.sub-btn:hover,.accordion:hover{background:#111;}
+.panel{display:none;background:#f1f1f1;padding:10px;margin-bottom:10px;border-radius:6px;}
+.hidden{display:none;}
+.back{cursor:pointer;color:#ff7b00;font-weight:bold;margin-bottom:10px;display:inline-block;}
+.footer{text-align:center;padding:12px;margin-top:30px;background:#111;color:#fff;}
+@media (max-width:600px){header{flex-direction:column;text-align:center;}nav a{display:inline-block;margin:6px;}}
+.file-block{background:#eee;padding:10px;margin:6px 0;border-radius:6px;}
+input[type=text],input[type=password]{width:70%;padding:8px;border-radius:4px;border:1px solid #ccc;margin-right:6px;}
+button{padding:8px 12px;border:none;border-radius:4px;background:#ff7b00;color:#fff;cursor:pointer;}
+button:hover{background:#111;}
+#chatBox{width:100%;height:300px;border:1px solid #ccc;padding:10px;overflow-y:auto;background:#f1f1f1;margin-bottom:10px;border-radius:6px;}
+</style>
+</head>
+<body>
+
+<header>
+<h2>Biotechnology & Genetic Engineering — UIU</h2>
+<nav>
+<a onclick="showHome()">Home</a>
+<a onclick="showAbout()">About</a>
+<a onclick="showFaculty()">Faculty</a>
+<a onclick="showBatch()">Batch</a>
+<a onclick="showAI()">Ask AI</a>
+</nav>
+</header>
+
+<!-- HOME -->
+<div class="container" id="home">
+<h2>Welcome to UIU BGE Department</h2>
+<p>Explore About, Faculty, Batch details, Notes, Questions & AI Help Desk.</p>
+</div>
+
+<!-- ABOUT -->
+<div class="container hidden" id="aboutPage">
+<div class="back" onclick="showHome()">⬅ Back</div>
+<h3>About BGE Department</h3>
+
+<button class="accordion">Overview</button>
+<div class="panel">
+<p>The Department of BGE focuses on biotechnology, genetic engineering, genomics, microbiology, molecular biology, tissue culture, vaccine science, agriculture & bio-tech industries. Students engage in lectures, lab classes, seminars, research methodology, project work and publications. Graduates are prepared for careers in agriculture biotechnology, vaccine/biopharma, genetic engineering, genomics, environmental biotechnology, and industrial bioprocessing.</p>
+</div>
+
+<button class="accordion">Core Courses</button>
+<div class="panel">
+<ul>
+<li>BGE 1001: General Biology — 3 credits</li>
+<li>BGE 1002: Basic Biochemistry — 3 credits</li>
+<li>BGE 1003: Introductory Biotechnology & Genetic Engineering — 3 credits</li>
+<li>BGE 1004: Basic Microbiology — 3 credits</li>
+<li>BGE 2001: Enzymes & Enzyme Kinetics — 3 credits</li>
+<li>BGE 2002: Basics of Molecular Biology — 3 credits</li>
+<li>BGE 2003: Protein Structure & Function — 3 credits</li>
+<li>BGE 2004: Molecular Genetics — 3 credits</li>
+<li>BGE 2005: Bioenergetics & Metabolism — 3 credits</li>
+<li>BGE 2006: Cell Biology — 3 credits</li>
+<li>BGE 2007: Human Physiology — 3 credits</li>
+<li>BGE 3001: Animal & Plant Tissue Culture — 3 credits</li>
+<li>BGE 3002: Basic Immunology — 3 credits</li>
+<li>BGE 3003: Genomics, Proteomics & Bioinformatics — 3 credits</li>
+<li>BGE 3004: Agriculture Biotechnology — 3 credits</li>
+<li>BGE 3005: Animal Biotechnology — 3 credits</li>
+<li>BGE 3006: Molecular Biology of Diseases — 3 credits</li>
+<li>BGE 3007: Recombinant DNA Technology — 3 credits</li>
+<li>BGE 3008: Microbial Genetics — 3 credits</li>
+<li>BGE 3009: Developmental Biology — 3 credits</li>
+<li>BGE 4001: Fermentation Technology & Bioprocessing — 3 credits</li>
+<li>BGE 4002: Biotechnology of Microbial System — 3 credits</li>
+<li>BGE 4003: Computational Genomics & System Biology — 3 credits</li>
+<li>BGE 4004: Medical Biotechnology — 3 credits</li>
+<li>BGE 4005: Cellular Communication & Signaling — 3 credits</li>
+<li>BGE 4006: GMOs, Biosafety & Bioethics — 3 credits</li>
+<li>BGE 4008: Advanced Molecular Biology — 3 credits</li>
+<li>BGE 4009: Virology & Oncology — 3 credits</li>
+<li>BGE 4010: Methods in Biotechnology — 3 credits</li>
+<li>BGE 4011: Environmental Biotechnology — 3 credits</li>
+<li>BGE 4012: Aquaculture & Marine Biotechnology — 3 credits</li>
+<li>BGE 4013: Business Perspective of Biotechnology — 3 credits</li>
+</ul>
+</div>
+
+<button class="accordion">Total Credits</button>
+<div class="panel">
+<p>Total program: <b>140 credits</b> including core, lab & non-departmental courses.</p>
+</div>
+
+<button class="accordion">Non-departmental Courses</button>
+<div class="panel">
+<ul>
+<li>Mathematics</li>
+<li>Physics</li>
+<li>English & Communication</li>
+<li>BDS (Biostatistics)</li>
+</ul>
+</div>
+
+<button class="accordion">Lab Facilities</button>
+<div class="panel">
+<ul>
+<li>Cell Culture Lab</li>
+<li>Microbial Lab</li>
+<li>Bioinformatics Lab</li>
+<li>Genomics & Molecular Lab</li>
+</ul>
+</div>
+</div>
+
+<!-- FACULTY -->
+<div class="container hidden" id="facultyPage">
+<div class="back" onclick="showHome()">⬅ Back</div>
+<h3>Faculty Members</h3>
+
+<button class="accordion">Dr. Md. Rafiq Islam</button>
+<div class="panel">
+<p>Email: rafiq@uiu.ac.bd</p>
+<p>Room: 919</p>
+<p>Expertise: Molecular Biology & Biotechnology</p>
+</div>
+
+<button class="accordion">Dr. Nahid Tamanna</button>
+<div class="panel">
+<p>Email: nahid@uiu.ac.bd</p>
+<p>Room: 837</p>
+<p>Expertise: Cell & Molecular Biology</p>
+</div>
+
+<button class="accordion">Belal Hossain</button>
+<div class="panel">
+<p>Email: belal@uiu.ac.bd</p>
+<p>Room: 919</p>
+<p>Qualification: Biotechnology</p>
+</div>
+
+<button class="accordion">Khalid Shahriar</button>
+<div class="panel">
+<p>Email: khalid@uiu.ac.bd</p>
+<p>Room: 835</p>
+<p>Qualification: Molecular Biology</p>
+</div>
+</div>
+
+<!-- BATCH -->
+<div class="container hidden" id="batchPage">
+<div class="back" onclick="showHome()">⬅ Back</div>
+<h3>Select Batch</h3>
+<div class="section-btn" onclick="openBatch('243')">243 Batch</div>
+<div class="section-btn" onclick="openBatch('251')">251 Batch</div>
+<div class="section-btn" onclick="openBatch('252')">252 Batch</div>
+</div>
+
+<!-- BATCH SUB -->
+<div class="container hidden" id="batchSubPage">
+<div class="back" onclick="showBatch()">⬅ Back</div>
+<h3 id="batchTitle"></h3>
+<div class="sub-btn" onclick="openMembers()">Members</div>
+<div class="sub-btn" onclick="openNotes()">Notes</div>
+<div class="sub-btn" onclick="openQuestions()">Questions</div>
+<div class="sub-btn">TBA</div>
+<div class="sub-btn">TBA</div>
+</div>
+
+<!-- MEMBERS -->
+<div class="container hidden" id="memberPage">
+<div class="back" onclick="goBackBatch()">⬅ Back</div>
+<h3>Members (Add Photo & Name)</h3>
+<p>Feature: Add student photos & info in card style.</p>
+</div>
+
+<!-- NOTES -->
+<div class="container hidden" id="notesPage">
+<div class="back" onclick="goBackBatch()">⬅ Back</div>
+<h3>Notes</h3>
+<input type="password" id="notePass" placeholder="Enter Password">
+<button onclick="checkNotes()">Unlock</button>
+<div id="notesPanel" class="hidden">
+<h4>Upload Note</h4>
+<input type="file" id="noteFile"><button onclick="uploadNote()">Upload</button>
+<h4>Available Files:</h4>
+<div id="noteList"></div>
+</div>
+</div>
+
+<!-- QUESTIONS -->
+<div class="container hidden" id="questionPage">
+<div class="back" onclick="goBackBatch()">⬅ Back</div>
+<h3>Questions</h3>
+<input type="password" id="qPass" placeholder="Enter Password">
+<button onclick="checkQ()">Unlock</button>
+<div id="qPanel" class="hidden">
+<h4>Upload Question</h4>
+<input type="file" id="qFile"><button onclick="uploadQ()">Upload</button>
+<h4>Available Files:</h4>
+<div id="qList"></div>
+</div>
+</div>
+
+<!-- AI CHAT -->
+<div class="container hidden" id="aiPage">
+<div class="back" onclick="showHome()">⬅ Back</div>
+<h3>Ask BGE AI</h3>
+<div id="chatBox"></div>
+<input type="text" id="questionInput" placeholder="Ask something...">
+<button onclick="sendQuestion()">Ask</button>
+</div>
+
+<div class="footer">
+Developed by Salman Rohan — 3212510021
+</div>
+
+<script>
+let currentBatch="";
+let notePassword="876543210";
+let qPassword="876543210";
+
+function hideAll(){
+["home","aboutPage","facultyPage","batchPage","batchSubPage","memberPage","notesPage","questionPage","aiPage"]
+.forEach(id=>document.getElementById(id).classList.add("hidden"));
+}
+function showHome(){hideAll();document.getElementById("home").classList.remove("hidden");}
+function showAbout(){hideAll();document.getElementById("aboutPage").classList.remove("hidden");}
+function showFaculty(){hideAll();document.getElementById("facultyPage").classList.remove("hidden");}
+function showBatch(){hideAll();document.getElementById("batchPage").classList.remove("hidden");}
+function showAI(){hideAll();document.getElementById("aiPage").classList.remove("hidden");}
+function openBatch(b){currentBatch=b;hideAll();document.getElementById("batchSubPage").classList.remove("hidden");document.getElementById("batchTitle").innerText="Batch "+b;}
+function goBackBatch(){hideAll();document.getElementById("batchSubPage").classList.remove("hidden");}
+function openMembers(){hideAll();document.getElementById("memberPage").classList.remove("hidden");}
+function openNotes(){hideAll();document.getElementById("notesPage").classList.remove("hidden");}
+function openQuestions(){hideAll();document.getElementById("questionPage").classList.remove("hidden");}
+
+// Notes
+function checkNotes(){if(document.getElementById("notePass").value===notePassword) document.getElementById("notesPanel").classList.remove("hidden"); else alert("Wrong Password!");}
+function uploadNote(){let f=document.getElementById("noteFile").files[0]; if(!f) return; let list=document.getElementById("noteList"); let div=document.createElement("div"); div.className="file-block"; div.innerHTML=`📎 ${f.name} — <a href="#">Download</a>`; list.appendChild(div);}
+
+// Questions
+function checkQ(){if(document.getElementById("qPass").value===qPassword) document.getElementById("qPanel").classList.remove("hidden"); else alert("Wrong Password!");}
+function uploadQ(){let f=document.getElementById("qFile").files[0]; if(!f) return; let list=document.getElementById("qList"); let div=document.createElement("div"); div.className="file-block"; div.innerHTML=`📄 ${f.name} — <a href="#">Download</a>`; list.appendChild(div);}
+
+// AI
+function sendQuestion(){
+let q=document.getElementById("questionInput").value.trim();
+if(q==="") return;
+let chatBox=document.getElementById("chatBox");
+let userDiv=document.createElement("div"); userDiv.style.margin="8px 0"; userDiv.style.fontWeight="bold"; userDiv.textContent="You: "+q; chatBox.appendChild(userDiv);
+chatBox.scrollTop = chatBox.scrollHeight; document.getElementById("questionInput").value="";
+let answer="";
+let qLower=q.toLowerCase();
+if(qLower.includes("hello")) answer="Hello! How can I help you?";
+else if(qLower.includes("course") || qLower.includes("credit")) answer="BGE has around 140 credits including core, non-departmental & labs.";
+else if(qLower.includes("faculty")) answer="Total 4 faculty available. Check Faculty Section.";
+else if(qLower.includes("lab")) answer="UIU BGE has Cell, Microbial, Bioinformatics and Molecular labs.";
+else if(qLower.includes("thank")) answer="You're welcome!";
+else if(qLower.includes("bge") || qLower.includes("uiu")) answer="UIU BGE focuses on biotechnology, genetics, genomics and research.";
+else answer="I am an AI of UIU BGE Department. I cannot answer outside questions.";
+let aiDiv=document.createElement("div"); aiDiv.style.margin="4px 0 12px 0"; aiDiv.style.color="#ff7b00"; aiDiv.textContent="BGE AI: "+answer; chatBox.appendChild(aiDiv);
+chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+// About Accordion
+let acc=document.getElementsByClassName("accordion");
+for(let i=0;i<acc.length;i++){
+    acc[i].addEventListener("click",function(){
+        let panel=this.nextElementSibling;
+        panel.style.display = panel.style.display==="block"?"none":"block";
+    });
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
